@@ -1,8 +1,27 @@
 import React from 'react';
 import { ArrowRight, Play, MapPin, Zap, Eye, Coins } from 'lucide-react';
-import ImageSlider from './ImageSlider';
+import VideoPlayer from './VideoPlayer';
 
 const Hero = () => {
+  // Home page video collection - placeholder for videos you'll upload
+  const homeVideos = [
+    {
+      src: "/videos/home/agentsphere_overview.mp4",
+      title: "AgentSphere Platform Overview",
+      description: "Complete introduction to the world's first Agentic Internet platform"
+    },
+    {
+      src: "/videos/home/agent_deployment_demo.mp4", 
+      title: "Agent Deployment Demo",
+      description: "See how easy it is to deploy AI agents in your world with 1cm precision"
+    },
+    {
+      src: "/videos/home/ar_experience_showcase.mp4",
+      title: "AR Experience Showcase", 
+      description: "Experience how agents come to life through augmented reality"
+    }
+    // Add more videos as you upload them
+  ];
   return (
     <section id="home" className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
       {/* Animated background elements */}
@@ -68,9 +87,15 @@ const Hero = () => {
             </button>
           </div>
 
-          {/* Image Slider */}
+          {/* Video Player Section */}
           <div className="mt-16">
-            <ImageSlider />
+            <div className="text-center mb-8">
+              <h2 className="text-3xl font-bold text-white mb-4">See AgentSphere in Action</h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                Watch how AgentSphere transforms the way we interact with AI through location-based AR experiences.
+              </p>
+            </div>
+            <VideoPlayer videos={homeVideos} className="max-w-6xl mx-auto" />
           </div>
 
           {/* How It Works */}
