@@ -1,29 +1,40 @@
-import React from 'react';
-import { ArrowRight, Play, MapPin, Zap, Eye, Coins } from 'lucide-react';
-import VideoPlayer from './VideoPlayer';
+import React from "react";
+import { ArrowRight, Play, MapPin, Zap, Eye, Coins } from "lucide-react";
+import VideoPlayer from "./VideoPlayer";
 
 const Hero = () => {
-  // Home page video collection - placeholder for videos you'll upload
+  // Home page video collection with uploaded videos
   const homeVideos = [
     {
-      src: "/videos/home/agentsphere_overview.mp4",
-      title: "AgentSphere Platform Overview",
-      description: "Complete introduction to the world's first Agentic Internet platform"
+      src: "/videos/home/AgentSphere_D_World_Building.mp4",
+      title: "AgentSphere 3D World Building",
+      description:
+        "See how AgentSphere enables precise 3D world building and agent deployment",
     },
     {
-      src: "/videos/home/agent_deployment_demo.mp4", 
-      title: "Agent Deployment Demo",
-      description: "See how easy it is to deploy AI agents in your world with 1cm precision"
+      src: "/videos/home/AR_Agent_Interaction_and_Payment.mp4",
+      title: "AR Agent Interaction & Payment",
+      description:
+        "Experience seamless AR agent interactions with integrated payment systems",
     },
     {
-      src: "/videos/home/ar_experience_showcase.mp4",
-      title: "AR Experience Showcase", 
-      description: "Experience how agents come to life through augmented reality"
-    }
-    // Add more videos as you upload them
+      src: "/videos/home/AR_World_Video_Ready.mp4",
+      title: "AR World Experience",
+      description:
+        "Explore the complete AR world experience with location-based agents",
+    },
+    {
+      src: "/videos/home/agents arqr merge 3 vids.mp4",
+      title: "Complete AgentSphere AR Experience",
+      description:
+        "Comprehensive showcase of AgentSphere's AR QR payment and agent capabilities",
+    },
   ];
   return (
-    <section id="home" className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">
+    <section
+      id="home"
+      className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden"
+    >
       {/* Animated background elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-green-500/10 rounded-full blur-3xl animate-pulse"></div>
@@ -42,36 +53,54 @@ const Hero = () => {
           {/* Main Headline */}
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             Deploy Agents in
-            <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent"> Your World</span>
+            <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
+              {" "}
+              Your World
+            </span>
           </h1>
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-            Create, test, and experience location-based AI Agents through AR. 
-            Transform your school and community with personalized digital assistants.
+            Create, test, and experience location-based AI Agents through AR.
+            Transform your school and community with personalized digital
+            assistants.
           </p>
 
           {/* Key Features Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 max-w-5xl mx-auto">
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
               <MapPin className="w-8 h-8 text-green-400 mb-3 mx-auto" />
-              <h3 className="text-white font-semibold mb-2">1cm Precision GPS</h3>
-              <p className="text-gray-400 text-sm">RTK enhanced positioning for exact agent placement</p>
+              <h3 className="text-white font-semibold mb-2">
+                1cm Precision GPS
+              </h3>
+              <p className="text-gray-400 text-sm">
+                RTK enhanced positioning for exact agent placement
+              </p>
             </div>
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
               <Eye className="w-8 h-8 text-purple-400 mb-3 mx-auto" />
               <h3 className="text-white font-semibold mb-2">AR QR Payments</h3>
-              <p className="text-gray-400 text-sm">World's first floating QR payment system</p>
+              <p className="text-gray-400 text-sm">
+                World's first floating QR payment system
+              </p>
             </div>
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
               <Coins className="w-8 h-8 text-yellow-400 mb-3 mx-auto" />
-              <h3 className="text-white font-semibold mb-2">Earn by Deploying</h3>
-              <p className="text-gray-400 text-sm">Monetize your AI agent creations</p>
+              <h3 className="text-white font-semibold mb-2">
+                Earn by Deploying
+              </h3>
+              <p className="text-gray-400 text-sm">
+                Monetize your AI agent creations
+              </p>
             </div>
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
               <Zap className="w-8 h-8 text-blue-400 mb-3 mx-auto" />
-              <h3 className="text-white font-semibold mb-2">Multi-Blockchain</h3>
-              <p className="text-gray-400 text-sm">BlockDAG, Solana, Morph networks</p>
+              <h3 className="text-white font-semibold mb-2">
+                Multi-Blockchain
+              </h3>
+              <p className="text-gray-400 text-sm">
+                BlockDAG, Solana, Morph networks
+              </p>
             </div>
           </div>
 
@@ -90,9 +119,12 @@ const Hero = () => {
           {/* Video Player Section */}
           <div className="mt-16">
             <div className="text-center mb-8">
-              <h2 className="text-3xl font-bold text-white mb-4">See AgentSphere in Action</h2>
+              <h2 className="text-3xl font-bold text-white mb-4">
+                See AgentSphere in Action
+              </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Watch how AgentSphere transforms the way we interact with AI through location-based AR experiences.
+                Watch how AgentSphere transforms the way we interact with AI
+                through location-based AR experiences.
               </p>
             </div>
             <VideoPlayer videos={homeVideos} className="max-w-6xl mx-auto" />
@@ -100,14 +132,20 @@ const Hero = () => {
 
           {/* How It Works */}
           <div className="mt-20">
-            <h2 className="text-3xl font-bold text-white mb-12">How It Works</h2>
+            <h2 className="text-3xl font-bold text-white mb-12">
+              How It Works
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center text-white font-bold text-xl mb-4 mx-auto">
                   1
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">Deploy</h3>
-                <p className="text-gray-400">Choose the name & location for your agent</p>
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  Deploy
+                </h3>
+                <p className="text-gray-400">
+                  Choose the name & location for your agent
+                </p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xl mb-4 mx-auto">
@@ -120,8 +158,12 @@ const Hero = () => {
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl mb-4 mx-auto">
                   3
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">Experience</h3>
-                <p className="text-gray-400">Live Experience with full AR interaction</p>
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  Experience
+                </h3>
+                <p className="text-gray-400">
+                  Live Experience with full AR interaction
+                </p>
               </div>
             </div>
           </div>
