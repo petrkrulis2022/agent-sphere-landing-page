@@ -15,19 +15,19 @@ const WorldBuilderSection = () => {
   // Digital World Builder video collection
   const worldBuilderVideos = [
     {
-      src: "/src/assets/videos/digital-world-builder/AgentSphere_D_World_Building.mp4",
+      src: "/videos/digital-world-builder/AgentSphere_D_World_Building.mp4",
       title: "AgentSphere 3D World Building",
       description:
         "Complete overview of the 3D world building system and its capabilities",
     },
     {
-      src: "/src/assets/videos/digital-world-builder/Digital_Twin_for_Retail_Insights.mp4",
+      src: "/videos/digital-world-builder/Digital_Twin_for_Retail_Insights.mp4",
       title: "Digital Twin for Retail Insights",
       description:
         "How digital twins provide valuable insights for retail businesses",
     },
     {
-      src: "/src/assets/videos/digital-world-builder/Digital_Twins_Collaborative_Persistent_Decentralized.mp4",
+      src: "/videos/digital-world-builder/Digital_Twins_Collaborative_Persistent_Decentralized.mp4",
       title: "Collaborative Persistent Digital Twins",
       description:
         "Decentralized approach to collaborative digital twin creation",

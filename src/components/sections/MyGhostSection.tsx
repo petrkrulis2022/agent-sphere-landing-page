@@ -16,52 +16,52 @@ const MyGhostSection = () => {
   // My Ghost video collection
   const myGhostVideos = [
     {
-      src: "/src/assets/videos/my-ghost/AI_Companion_AR_Experience.mp4",
+      src: "/videos/my-ghost/AI_Companion_AR_Experience.mp4",
       title: "AI Companion AR Experience",
       description:
         "Experience your personal AI companion in augmented reality environments",
     },
     {
-      src: "/src/assets/videos/my-ghost/AI_Ghost_Companion_Video_Ready.mp4",
+      src: "/videos/my-ghost/AI_Ghost_Companion_Video_Ready.mp4",
       title: "AI Ghost Companion Overview",
       description:
         "Complete overview of the AI Ghost companion system and features",
     },
     {
-      src: "/src/assets/videos/my-ghost/AI_Ghost_Offers_Emotional_Support.mp4",
+      src: "/videos/my-ghost/AI_Ghost_Offers_Emotional_Support.mp4",
       title: "Emotional Support Features",
       description:
         "How your AI Ghost provides emotional support and companionship",
     },
     {
-      src: "/src/assets/videos/my-ghost/AI_Ghost_Video_Confirmation.mp4",
+      src: "/videos/my-ghost/AI_Ghost_Video_Confirmation.mp4",
       title: "AI Ghost Confirmation System",
       description:
         "Interactive confirmation and response system of your AI Ghost",
     },
     {
-      src: "/src/assets/videos/my-ghost/AI_Ghost_Video_Ready.mp4",
+      src: "/videos/my-ghost/AI_Ghost_Video_Ready.mp4",
       title: "AI Ghost Ready for Interaction",
       description: "Your AI Ghost ready for daily interactions and assistance",
     },
     {
-      src: "/src/assets/videos/my-ghost/AR_Ghost_Video_Ready.mp4",
+      src: "/videos/my-ghost/AR_Ghost_Video_Ready.mp4",
       title: "AR Ghost in Action",
       description: "See your AR Ghost in real-world environments and scenarios",
     },
     {
-      src: "/src/assets/videos/my-ghost/AgentSphere_The_Agentic_Internet (1).mp4",
+      src: "/videos/my-ghost/AgentSphere_The_Agentic_Internet (1).mp4",
       title: "AgentSphere Agentic Internet",
       description:
         "Understanding the broader AgentSphere ecosystem and agentic internet",
     },
     {
-      src: "/src/assets/videos/my-ghost/Video_Ready_Adaptive_Assistance.mp4",
+      src: "/videos/my-ghost/Video_Ready_Adaptive_Assistance.mp4",
       title: "Adaptive Assistance Features",
       description: "How your Ghost adapts to provide personalized assistance",
     },
     {
-      src: "/src/assets/videos/my-ghost/Video_Style_Guidelines_and_Generation.mp4",
+      src: "/videos/my-ghost/Video_Style_Guidelines_and_Generation.mp4",
       title: "Style Guidelines and Generation",
       description:
         "Customizing your Ghost's appearance and behavior preferences",

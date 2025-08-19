@@ -14,83 +14,83 @@ const NearPaySection = () => {
   // NeAR Pay video collection
   const nearPayVideos = [
     {
-      src: "/src/assets/videos/near-pay/AR_Agent_Payment_Video_Ready.mp4",
+      src: "/videos/near-pay/AR_Agent_Payment_Video_Ready.mp4",
       title: "AR Agent Payment System",
       description:
         "See how AR agents provide seamless payment experiences in real-world environments",
     },
     {
-      src: "/src/assets/videos/near-pay/AR_Pay_D_Cube_Crypto_Demo.mp4",
+      src: "/videos/near-pay/AR_Pay_D_Cube_Crypto_Demo.mp4",
       title: "D-Cube Crypto Payment Demo",
       description:
         "Revolutionary 3D cube interface for cryptocurrency payments through AR",
     },
     {
-      src: "/src/assets/videos/near-pay/AR_QR_Code_Generation_and_Payment.mp4",
+      src: "/videos/near-pay/AR_QR_Code_Generation_and_Payment.mp4",
       title: "AR QR Code Generation",
       description:
         "Dynamic QR code generation and payment processing in augmented reality",
     },
     {
-      src: "/src/assets/videos/near-pay/AR_QR_Code_Payment_Demonstration.mp4",
+      src: "/videos/near-pay/AR_QR_Code_Payment_Demonstration.mp4",
       title: "AR QR Payment Demo",
       description: "Complete demonstration of AR QR code payment workflow",
     },
     {
-      src: "/src/assets/videos/near-pay/AR_QR_Payment_Video_Storyboard.mp4",
+      src: "/videos/near-pay/AR_QR_Payment_Video_Storyboard.mp4",
       title: "AR Payment Storyboard",
       description: "Step-by-step visualization of the AR payment process",
     },
     {
-      src: "/src/assets/videos/near-pay/AR_Restaurant_Payment_Confirmation.mp4",
+      src: "/videos/near-pay/AR_Restaurant_Payment_Confirmation.mp4",
       title: "Restaurant Payment Experience",
       description: "AR payment confirmation system for restaurant transactions",
     },
     {
-      src: "/src/assets/videos/near-pay/Bitcoin_Lightning_Payment_AR_Video (1).mp4",
+      src: "/videos/near-pay/Bitcoin_Lightning_Payment_AR_Video (1).mp4",
       title: "Bitcoin Lightning AR Payments",
       description: "Lightning-fast Bitcoin payments through AR interface",
     },
     {
-      src: "/src/assets/videos/near-pay/Crypto_Lifestyle_AR_Payment_Video.mp4",
+      src: "/videos/near-pay/Crypto_Lifestyle_AR_Payment_Video.mp4",
       title: "Crypto Lifestyle Payments",
       description:
         "Integration of cryptocurrency payments into daily lifestyle",
     },
     {
-      src: "/src/assets/videos/near-pay/Futuristic_QR_Code_Payment_Video.mp4",
+      src: "/videos/near-pay/Futuristic_QR_Code_Payment_Video.mp4",
       title: "Futuristic QR Payments",
       description: "Next-generation QR code payment technology in action",
     },
     {
-      src: "/src/assets/videos/near-pay/Hedera_AR_Payment_Commuter_Experience.mp4",
+      src: "/videos/near-pay/Hedera_AR_Payment_Commuter_Experience.mp4",
       title: "Hedera Commuter Payments",
       description: "Seamless AR payments for commuters using Hedera blockchain",
     },
     {
-      src: "/src/assets/videos/near-pay/Multi_Agent_Blockchain_Payments.mp4",
+      src: "/videos/near-pay/Multi_Agent_Blockchain_Payments.mp4",
       title: "Multi-Agent Blockchain System",
       description:
         "Multiple AR agents handling various blockchain payment networks",
     },
     {
-      src: "/src/assets/videos/near-pay/Seamless_AR_Payment_Experience.mp4",
+      src: "/videos/near-pay/Seamless_AR_Payment_Experience.mp4",
       title: "Seamless AR Experience",
       description:
         "Effortless payment experience through advanced AR technology",
     },
     {
-      src: "/src/assets/videos/near-pay/Virtual_Card_Payment_AR_Showcase.mp4",
+      src: "/videos/near-pay/Virtual_Card_Payment_AR_Showcase.mp4",
       title: "Virtual Card AR Showcase",
       description: "Virtual payment cards rendered in augmented reality",
     },
     {
-      src: "/src/assets/videos/near-pay/taxi 1.mp4",
+      src: "/videos/near-pay/taxi 1.mp4",
       title: "Taxi Payment Demo 1",
       description: "AR payment system demonstration in taxi environments",
     },
     {
-      src: "/src/assets/videos/near-pay/taxi 3.mp4",
+      src: "/videos/near-pay/taxi 3.mp4",
       title: "Taxi Payment Demo 2",
       description: "Advanced taxi payment scenarios using AR technology",
     },

@@ -16,25 +16,25 @@ const HomeSecuritySection = () => {
   // Home Security image collection
   const homeSecurityImages = [
     {
-      src: "/src/assets/videos/home-security/home_security_system_1.png",
+      src: "/videos/home-security/home_security_system_1.png",
       title: "Comprehensive Home Security Overview",
       description:
         "Complete multi-agent security system protecting all areas of your home",
     },
     {
-      src: "/src/assets/videos/home-security/home_security_system_2.png",
+      src: "/videos/home-security/home_security_system_2.png",
       title: "Agent Network Deployment",
       description:
         "Strategic placement of security agents throughout your property",
     },
     {
-      src: "/src/assets/videos/home-security/home_security_system_3.png",
+      src: "/videos/home-security/home_security_system_3.png",
       title: "Integrated Security Dashboard",
       description:
         "Central command interface for monitoring all security agents",
     },
     {
-      src: "/src/assets/videos/home-security/Gemini_Generated_Image_51kdni51kdni51kd.png",
+      src: "/videos/home-security/Gemini_Generated_Image_51kdni51kdni51kd.png",
       title: "Advanced Security Visualization",
       description:
         "AI-powered security monitoring and threat detection systems",
