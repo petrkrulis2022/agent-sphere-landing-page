@@ -1,23 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-type Section = 'home' | 'near-pay' | 'world-builder' | 'social-ar' | 'my-ghost' | 'home-security' | 'contact';
+type Section = "home" | "cubepay" | "spatia" | "social-ar" | "contact";
 
 interface NavigationProps {
   currentSection: Section;
   onSectionChange: (section: Section) => void;
 }
 
-const Navigation: React.FC<NavigationProps> = ({ currentSection, onSectionChange }) => {
+const Navigation: React.FC<NavigationProps> = ({
+  currentSection,
+  onSectionChange,
+}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { id: 'home' as Section, name: 'Home', href: '#home' },
-    { id: 'near-pay' as Section, name: 'NeAR Pay', href: '#near-pay' },
-    { id: 'world-builder' as Section, name: 'Digital World Builder', href: '#world-builder' },
-    { id: 'social-ar' as Section, name: 'Social AR Network', href: '#social-ar' },
-    { id: 'my-ghost' as Section, name: 'My Ghost', href: '#my-ghost' },
-    { id: 'home-security' as Section, name: 'Home Security', href: '#home-security' },
-    { id: 'contact' as Section, name: 'Contact', href: '#contact' },
+    { id: "home" as Section, name: "Home", href: "#home" },
+    { id: "cubepay" as Section, name: "Cube Pay", href: "#cubepay" },
+    { id: "spatia" as Section, name: "Spatia", href: "#spatia" },
+    {
+      id: "social-ar" as Section,
+      name: "Social AR Network",
+      href: "#social-ar",
+    },
+    { id: "contact" as Section, name: "Contact", href: "#contact" },
   ];
 
   const handleNavClick = (section: Section) => {
@@ -35,8 +40,8 @@ const Navigation: React.FC<NavigationProps> = ({ currentSection, onSectionChange
             onClick={() => handleNavClick(item.id)}
             className={`text-sm font-medium transition-colors duration-200 ${
               currentSection === item.id
-                ? 'text-green-400'
-                : 'text-gray-300 hover:text-green-400'
+                ? "text-green-400"
+                : "text-gray-300 hover:text-green-400"
             }`}
           >
             {item.name}
@@ -54,8 +59,8 @@ const Navigation: React.FC<NavigationProps> = ({ currentSection, onSectionChange
                 onClick={() => handleNavClick(item.id)}
                 className={`block w-full text-left px-3 py-2 transition-colors duration-200 ${
                   currentSection === item.id
-                    ? 'text-green-400'
-                    : 'text-gray-300 hover:text-green-400'
+                    ? "text-green-400"
+                    : "text-gray-300 hover:text-green-400"
                 }`}
               >
                 {item.name}

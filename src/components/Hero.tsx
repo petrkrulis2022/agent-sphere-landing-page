@@ -1,5 +1,13 @@
 import React from "react";
-import { ArrowRight, Play, MapPin, Zap, Eye, Coins } from "lucide-react";
+import {
+  ArrowRight,
+  Play,
+  Box,
+  Zap,
+  Shield,
+  Lock,
+  CreditCard,
+} from "lucide-react";
 import VideoPlayer from "./VideoPlayer";
 
 const Hero = () => {
@@ -7,27 +15,27 @@ const Hero = () => {
   const homeVideos = [
     {
       src: "/videos/home/AgentSphere_D_World_Building.mp4",
-      title: "AgentSphere 3D World Building",
+      title: "CubePay 3D Spatial Terminal",
       description:
-        "See how AgentSphere enables precise 3D world building and agent deployment",
+        "See how CubePay enables precise spatial payment terminals in AR",
     },
     {
       src: "/videos/home/AR_Agent_Interaction_and_Payment.mp4",
-      title: "AR Agent Interaction & Payment",
+      title: "AR Payment Interaction",
       description:
-        "Experience seamless AR agent interactions with integrated payment systems",
+        "Experience seamless AR payment interactions with CubePay technology",
     },
     {
       src: "/videos/home/AR_World_Video_Ready.mp4",
-      title: "AR World Experience",
+      title: "AR Payment Experience",
       description:
-        "Explore the complete AR world experience with location-based agents",
+        "Explore the complete AR payment experience with location-based terminals",
     },
     {
       src: "/videos/home/agents arqr merge 3 vids.mp4",
-      title: "Complete AgentSphere AR Experience",
+      title: "Complete CubePay AR Experience",
       description:
-        "Comprehensive showcase of AgentSphere's AR QR payment and agent capabilities",
+        "Comprehensive showcase of CubePay's AR QR payment capabilities",
     },
   ];
   return (
@@ -45,61 +53,59 @@ const Hero = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
         <div className="text-center">
           {/* Badge */}
-          <div className="inline-flex items-center px-4 py-2 bg-green-500/10 border border-green-500/20 rounded-full text-green-400 text-sm font-medium mb-8">
-            <Zap className="w-4 h-4 mr-2" />
-            World's First Agentic Internet Platform
+          <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500/10 to-green-500/10 border border-green-500/20 rounded-full text-green-400 text-sm font-medium mb-8">
+            <Box className="w-4 h-4 mr-2" />
+            World's First Spatial Payment Terminal Platform
           </div>
 
           {/* Main Headline */}
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Deploy Agents in
-            <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
+            The Future of
+            <span className="bg-gradient-to-r from-blue-400 via-green-400 to-cyan-400 bg-clip-text text-transparent">
               {" "}
-              Your World
+              AR Payments
             </span>
           </h1>
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-            Create, test, and experience location-based AI Agents through AR.
-            Transform your school and community with personalized digital
-            assistants.
+            Experience secure, instant payments through revolutionary spatial AR
+            technology. Transform any location into a virtual payment terminal
+            with CubePay.
           </p>
 
           {/* Key Features Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 max-w-5xl mx-auto">
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
-              <MapPin className="w-8 h-8 text-green-400 mb-3 mx-auto" />
+              <Box className="w-8 h-8 text-green-400 mb-3 mx-auto" />
               <h3 className="text-white font-semibold mb-2">
-                1cm Precision GPS
+                3D Payment Cubes
               </h3>
               <p className="text-gray-400 text-sm">
-                RTK enhanced positioning for exact agent placement
+                Floating spatial terminals in augmented reality
               </p>
             </div>
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
-              <Eye className="w-8 h-8 text-purple-400 mb-3 mx-auto" />
+              <CreditCard className="w-8 h-8 text-purple-400 mb-3 mx-auto" />
               <h3 className="text-white font-semibold mb-2">AR QR Payments</h3>
               <p className="text-gray-400 text-sm">
-                World's first floating QR payment system
+                Instant scanning and payment processing
               </p>
             </div>
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
-              <Coins className="w-8 h-8 text-yellow-400 mb-3 mx-auto" />
+              <Lock className="w-8 h-8 text-yellow-400 mb-3 mx-auto" />
               <h3 className="text-white font-semibold mb-2">
-                Earn by Deploying
+                Blockchain Security
               </h3>
               <p className="text-gray-400 text-sm">
-                Monetize your AI agent creations
+                Enterprise-grade payment protection
               </p>
             </div>
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
               <Zap className="w-8 h-8 text-blue-400 mb-3 mx-auto" />
-              <h3 className="text-white font-semibold mb-2">
-                Multi-Blockchain
-              </h3>
+              <h3 className="text-white font-semibold mb-2">Lightning Fast</h3>
               <p className="text-gray-400 text-sm">
-                BlockDAG, Solana, Morph networks
+                Sub-second transaction processing
               </p>
             </div>
           </div>
@@ -120,11 +126,11 @@ const Hero = () => {
           <div className="mt-16">
             <div className="text-center mb-8">
               <h2 className="text-3xl font-bold text-white mb-4">
-                See AgentSphere in Action
+                See CubePay in Action
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Watch how AgentSphere transforms the way we interact with AI
-                through location-based AR experiences.
+                Watch how CubePay transforms payments through revolutionary
+                spatial AR payment terminals.
               </p>
             </div>
             <VideoPlayer videos={homeVideos} className="max-w-6xl mx-auto" />
@@ -137,32 +143,36 @@ const Hero = () => {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center text-white font-bold text-xl mb-4 mx-auto">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-cyan-600 rounded-full flex items-center justify-center text-white font-bold text-xl mb-4 mx-auto">
                   1
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">
-                  Deploy
+                  Open CubePay
                 </h3>
                 <p className="text-gray-400">
-                  Choose the name & location for your agent
+                  Launch the app and point camera at payment location
                 </p>
               </div>
               <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xl mb-4 mx-auto">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-cyan-600 rounded-full flex items-center justify-center text-white font-bold text-xl mb-4 mx-auto">
                   2
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">Test</h3>
-                <p className="text-gray-400">Test & Debug in AR preview mode</p>
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  Scan Cube
+                </h3>
+                <p className="text-gray-400">
+                  3D payment terminal appears in AR
+                </p>
               </div>
               <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl mb-4 mx-auto">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-cyan-600 rounded-full flex items-center justify-center text-white font-bold text-xl mb-4 mx-auto">
                   3
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">
-                  Experience
+                  Pay Instantly
                 </h3>
                 <p className="text-gray-400">
-                  Live Experience with full AR interaction
+                  Secure blockchain-verified payment in seconds
                 </p>
               </div>
             </div>

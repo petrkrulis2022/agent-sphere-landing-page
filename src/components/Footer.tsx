@@ -1,5 +1,5 @@
 import React from 'react';
-import { Zap, Twitter, Github, Linkedin, Mail } from 'lucide-react';
+import { Box, Twitter, Github, Linkedin, Mail } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -9,13 +9,13 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-br from-green-400 to-green-600 rounded-lg flex items-center justify-center">
-                <Zap className="w-5 h-5 text-white" />
+              <div className="w-8 h-8 bg-gradient-to-br from-green-400 via-blue-500 to-cyan-600 rounded-lg flex items-center justify-center">
+                <Box className="w-5 h-5 text-white" />
               </div>
-              <span className="text-xl font-bold text-white">AgentSphere</span>
+              <span className="text-xl font-bold bg-gradient-to-r from-blue-400 via-green-400 to-cyan-400 bg-clip-text text-transparent">CubePay</span>
             </div>
             <p className="text-gray-400 text-sm">
-              The world's first Agentic Internet platform. Deploy AI agents in real-world locations with AR technology.
+              Revolutionary spatial payment terminal platform. Experience the future of AR payments with secure, instant transactions.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-green-400 transition-colors">
@@ -33,15 +33,13 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Use Cases */}
+          {/* Products */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Use Cases</h3>
+            <h3 className="text-white font-semibold mb-4">Products</h3>
             <ul className="space-y-2">
-              <li><a href="#near-pay" className="text-gray-400 hover:text-green-400 transition-colors text-sm">NeAR Pay</a></li>
-              <li><a href="#world-builder" className="text-gray-400 hover:text-green-400 transition-colors text-sm">Digital World Builder</a></li>
+              <li><a href="#cubepay" className="text-gray-400 hover:text-green-400 transition-colors text-sm">Cube Pay Terminal</a></li>
+              <li><a href="#spatia" className="text-gray-400 hover:text-green-400 transition-colors text-sm">Spatia AR Bank</a></li>
               <li><a href="#social-ar" className="text-gray-400 hover:text-green-400 transition-colors text-sm">Social AR Network</a></li>
-              <li><a href="#my-ghost" className="text-gray-400 hover:text-green-400 transition-colors text-sm">My Ghost</a></li>
-              <li><a href="#home-security" className="text-gray-400 hover:text-green-400 transition-colors text-sm">Home Security</a></li>
             </ul>
           </div>
 
@@ -49,11 +47,11 @@ const Footer = () => {
           <div>
             <h3 className="text-white font-semibold mb-4">Technology</h3>
             <ul className="space-y-2">
-              <li><span className="text-gray-400 text-sm">RTK GPS Enhancement</span></li>
+              <li><span className="text-gray-400 text-sm">3D Spatial Terminals</span></li>
               <li><span className="text-gray-400 text-sm">AR QR Payments</span></li>
-              <li><span className="text-gray-400 text-sm">Multi-Blockchain</span></li>
-              <li><span className="text-gray-400 text-sm">3D World Reconstruction</span></li>
-              <li><span className="text-gray-400 text-sm">Real-time Interactions</span></li>
+              <li><span className="text-gray-400 text-sm">Blockchain Security</span></li>
+              <li><span className="text-gray-400 text-sm">Multi-Currency Support</span></li>
+              <li><span className="text-gray-400 text-sm">Real-time Processing</span></li>
             </ul>
           </div>
 
@@ -72,10 +70,10 @@ const Footer = () => {
 
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            © 2025 AgentSphere. All rights reserved.
+            © 2025 CubePay. All rights reserved.
           </p>
           <p className="text-gray-400 text-sm mt-4 md:mt-0">
-            Building the future of the Agentic Internet
+            Building the future of spatial payments
           </p>
         </div>
       </div>

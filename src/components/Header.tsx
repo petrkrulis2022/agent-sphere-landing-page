@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { Menu, X, Zap } from 'lucide-react';
-import Navigation from './Navigation';
+import React, { useState } from "react";
+import { Menu, X, Box } from "lucide-react";
+import Navigation from "./Navigation";
 
-type Section = 'home' | 'near-pay' | 'world-builder' | 'social-ar' | 'my-ghost' | 'home-security' | 'contact';
+type Section = "home" | "cubepay" | "spatia" | "social-ar" | "contact";
 
 interface HeaderProps {
   currentSection: Section;
@@ -18,14 +18,19 @@ const Header: React.FC<HeaderProps> = ({ currentSection, onSectionChange }) => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-green-400 to-green-600 rounded-lg flex items-center justify-center">
-              <Zap className="w-5 h-5 text-white" />
+            <div className="w-8 h-8 bg-gradient-to-br from-green-400 via-blue-500 to-cyan-600 rounded-lg flex items-center justify-center">
+              <Box className="w-5 h-5 text-white" />
             </div>
-            <span className="text-xl font-bold text-white">AgentSphere</span>
+            <span className="text-xl font-bold bg-gradient-to-r from-blue-400 via-green-400 to-cyan-400 bg-clip-text text-transparent">
+              CubePay
+            </span>
           </div>
 
           {/* Navigation */}
-          <Navigation currentSection={currentSection} onSectionChange={onSectionChange} />
+          <Navigation
+            currentSection={currentSection}
+            onSectionChange={onSectionChange}
+          />
 
           {/* Launch App Button */}
           <div className="hidden lg:block">
@@ -39,7 +44,11 @@ const Header: React.FC<HeaderProps> = ({ currentSection, onSectionChange }) => {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="lg:hidden text-white hover:text-green-400 transition-colors"
           >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
           </button>
         </div>
       </div>
