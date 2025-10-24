@@ -1,6 +1,15 @@
 import React, { useState } from "react";
 
-type Section = "home" | "cubepay" | "spatia" | "social-ar" | "contact";
+type Section =
+  | "home"
+  | "how-it-works"
+  | "onboard-crypto"
+  | "base-app"
+  | "why-cubepay"
+  | "cubepay"
+  | "spatia"
+  | "private-payments"
+  | "contact";
 
 interface NavigationProps {
   currentSection: Section;
@@ -15,13 +24,32 @@ const Navigation: React.FC<NavigationProps> = ({
 
   const navItems = [
     { id: "home" as Section, name: "Home", href: "#home" },
-    { id: "cubepay" as Section, name: "Cube Pay", href: "#cubepay" },
-    { id: "spatia" as Section, name: "Spatia", href: "#spatia" },
     {
-      id: "social-ar" as Section,
-      name: "Social AR Network",
-      href: "#social-ar",
+      id: "how-it-works" as Section,
+      name: "How It Works",
+      href: "#how-it-works",
     },
+    {
+      id: "onboard-crypto" as Section,
+      name: "Onboard to Crypto",
+      href: "#onboard-crypto",
+    },
+    {
+      id: "base-app" as Section,
+      name: "Base App",
+      href: "#base-app",
+    },
+    {
+      id: "why-cubepay" as Section,
+      name: "Why Cube Pay",
+      href: "#why-cubepay",
+    },
+    {
+      id: "private-payments" as Section,
+      name: "Private Payments",
+      href: "#private-payments",
+    },
+    { id: "spatia" as Section, name: "Spatia Bank", href: "#spatia" },
     { id: "contact" as Section, name: "Contact", href: "#contact" },
   ];
 

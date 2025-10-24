@@ -14,28 +14,25 @@ const Hero = () => {
   // Home page video collection with uploaded videos
   const homeVideos = [
     {
-      src: "/videos/home/AgentSphere_D_World_Building.mp4",
+      src: "/videos/cubepay/d-cube-crypto-payment.mp4",
       title: "CubePay 3D Spatial Terminal",
       description:
         "See how CubePay enables precise spatial payment terminals in AR",
     },
     {
-      src: "/videos/home/AR_Agent_Interaction_and_Payment.mp4",
-      title: "AR Payment Interaction",
-      description:
-        "Experience seamless AR payment interactions with CubePay technology",
+      src: "/videos/cubepay/Seamless_AR_Payment_Experience.mp4",
+      title: "Seamless AR Payment Experience",
+      description: "Experience seamless AR payment interactions with CubePay",
     },
     {
-      src: "/videos/home/AR_World_Video_Ready.mp4",
-      title: "AR Payment Experience",
-      description:
-        "Explore the complete AR payment experience with location-based terminals",
+      src: "/videos/cubepay/AR_Agent_Payment_Video_Ready.mp4",
+      title: "AR Agent Payment Flow",
+      description: "AI agents facilitate smooth AR payment transactions",
     },
     {
-      src: "/videos/home/agents arqr merge 3 vids.mp4",
-      title: "Complete CubePay AR Experience",
-      description:
-        "Comprehensive showcase of CubePay's AR QR payment capabilities",
+      src: "/videos/cubepay/Futuristic_QR_Code_Payment_Video.mp4",
+      title: "Futuristic QR Payment",
+      description: "Next-generation QR code payment experience",
     },
   ];
   return (
@@ -60,18 +57,18 @@ const Hero = () => {
 
           {/* Main Headline */}
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            The Future of
+            World's First
             <span className="bg-gradient-to-r from-blue-400 via-green-400 to-cyan-400 bg-clip-text text-transparent">
               {" "}
-              AR Payments
+              Spatial Payment Terminal
             </span>
           </h1>
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-            Experience secure, instant payments through revolutionary spatial AR
-            technology. Transform any location into a virtual payment terminal
-            with CubePay.
+            Pay with crypto, fiat, or voice—all from one AR cube. No wallet
+            switching. No complexity. Just rotate, select, and pay. Your ticket
+            to Spatia Bank.
           </p>
 
           {/* Key Features Grid */}
@@ -113,8 +110,11 @@ const Hero = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105 shadow-2xl hover:shadow-green-500/25 flex items-center">
-              Launch App
+              Launch Cube Pay
               <ArrowRight className="w-5 h-5 ml-2" />
+            </button>
+            <button className="border border-white/20 hover:border-white/40 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 hover:bg-white/5 flex items-center">
+              Connect Base App
             </button>
             <button className="border border-white/20 hover:border-white/40 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 hover:bg-white/5 flex items-center">
               <Play className="w-5 h-5 mr-2" />
@@ -134,6 +134,15 @@ const Hero = () => {
               </p>
             </div>
             <VideoPlayer videos={homeVideos} className="max-w-6xl mx-auto" />
+
+            {/* cube-pay.base.eth Banner */}
+            <div className="mt-12 flex justify-center">
+              <img
+                src="/images/cubepay/cube-pay-base-eth.jpeg"
+                alt="cube-pay.base.eth"
+                className="h-16 md:h-20 object-contain rounded-lg shadow-2xl hover:scale-105 transition-transform duration-300"
+              />
+            </div>
           </div>
 
           {/* How It Works */}

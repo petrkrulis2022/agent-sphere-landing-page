@@ -1,8 +1,17 @@
 import React, { useState } from "react";
-import { Menu, X, Box } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import Navigation from "./Navigation";
 
-type Section = "home" | "cubepay" | "spatia" | "social-ar" | "contact";
+type Section =
+  | "home"
+  | "how-it-works"
+  | "onboard-crypto"
+  | "base-app"
+  | "why-cubepay"
+  | "cubepay"
+  | "spatia"
+  | "private-payments"
+  | "contact";
 
 interface HeaderProps {
   currentSection: Section;
@@ -17,10 +26,12 @@ const Header: React.FC<HeaderProps> = ({ currentSection, onSectionChange }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-green-400 via-blue-500 to-cyan-600 rounded-lg flex items-center justify-center">
-              <Box className="w-5 h-5 text-white" />
-            </div>
+          <div className="flex items-center space-x-3">
+            <img
+              src="/images/cubepay/logo.png"
+              alt="CubePay Logo"
+              className="h-10 w-10 object-contain"
+            />
             <span className="text-xl font-bold bg-gradient-to-r from-blue-400 via-green-400 to-cyan-400 bg-clip-text text-transparent">
               CubePay
             </span>
