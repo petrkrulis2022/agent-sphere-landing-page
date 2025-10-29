@@ -1,29 +1,65 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import HowItWorksSection from "./components/sections/HowItWorksSection";
 import OnboardToCryptoSection from "./components/sections/OnboardToCryptoSection";
-import BaseAppIntegrationSection from "./components/sections/BaseAppIntegrationSection";
+import WatchDemoSection from "./components/sections/WatchDemoSection";
 import WhyCubePaySection from "./components/sections/WhyCubePaySection";
 import CubePaySection from "./components/sections/CubePaySection";
 import SpatiaSection from "./components/sections/SpatiaSection";
 import PrivatePaymentsSection from "./components/sections/PrivatePaymentsSection";
+import SpatiaRegistrationSection from "./components/sections/SpatiaRegistrationSection";
+import CubePayLanding from "./components/CubePayLanding";
 
 type Section =
   | "home"
   | "how-it-works"
   | "onboard-crypto"
-  | "base-app"
+  | "watch-demo"
   | "why-cubepay"
   | "cubepay"
   | "spatia"
   | "private-payments"
-  | "contact";
+  | "contact"
+  | "linktree"
+  | "register";
 
 function App() {
   const [currentSection, setCurrentSection] = useState<Section>("home");
+
+  // Handle hash changes for navigation
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.replace("#", "") as Section;
+      if (
+        hash &&
+        [
+          "home",
+          "how-it-works",
+          "onboard-crypto",
+          "watch-demo",
+          "why-cubepay",
+          "cubepay",
+          "spatia",
+          "private-payments",
+          "contact",
+          "linktree",
+          "register",
+        ].includes(hash)
+      ) {
+        setCurrentSection(hash);
+      }
+    };
+
+    // Check initial hash
+    handleHashChange();
+
+    // Listen for hash changes
+    window.addEventListener("hashchange", handleHashChange);
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, []);
 
   const renderSection = () => {
     switch (currentSection) {
@@ -33,8 +69,8 @@ function App() {
         return <HowItWorksSection />;
       case "onboard-crypto":
         return <OnboardToCryptoSection />;
-      case "base-app":
-        return <BaseAppIntegrationSection />;
+      case "watch-demo":
+        return <WatchDemoSection />;
       case "why-cubepay":
         return <WhyCubePaySection />;
       case "cubepay":
@@ -45,6 +81,10 @@ function App() {
         return <PrivatePaymentsSection />;
       case "contact":
         return <Contact />;
+      case "linktree":
+        return <CubePayLanding />;
+      case "register":
+        return <SpatiaRegistrationSection />;
       default:
         return <Hero />;
     }

@@ -4,12 +4,14 @@ type Section =
   | "home"
   | "how-it-works"
   | "onboard-crypto"
-  | "base-app"
+  | "watch-demo"
   | "why-cubepay"
   | "cubepay"
   | "spatia"
   | "private-payments"
-  | "contact";
+  | "contact"
+  | "linktree"
+  | "register";
 
 interface NavigationProps {
   currentSection: Section;
@@ -35,9 +37,9 @@ const Navigation: React.FC<NavigationProps> = ({
       href: "#onboard-crypto",
     },
     {
-      id: "base-app" as Section,
-      name: "Base App",
-      href: "#base-app",
+      id: "watch-demo" as Section,
+      name: "Watch Demo",
+      href: "#watch-demo",
     },
     {
       id: "why-cubepay" as Section,
@@ -95,7 +97,10 @@ const Navigation: React.FC<NavigationProps> = ({
               </button>
             ))}
             <div className="px-3 py-2">
-              <button className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-200">
+              <button
+                onClick={() => handleNavClick("linktree")}
+                className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-200"
+              >
                 Launch App
               </button>
             </div>

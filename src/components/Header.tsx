@@ -6,12 +6,14 @@ type Section =
   | "home"
   | "how-it-works"
   | "onboard-crypto"
-  | "base-app"
+  | "watch-demo"
   | "why-cubepay"
   | "cubepay"
   | "spatia"
   | "private-payments"
-  | "contact";
+  | "contact"
+  | "linktree"
+  | "register";
 
 interface HeaderProps {
   currentSection: Section;
@@ -45,7 +47,10 @@ const Header: React.FC<HeaderProps> = ({ currentSection, onSectionChange }) => {
 
           {/* Launch App Button */}
           <div className="hidden lg:block">
-            <button className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-green-500/25">
+            <button
+              onClick={() => onSectionChange("linktree")}
+              className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-green-500/25"
+            >
               Launch App
             </button>
           </div>

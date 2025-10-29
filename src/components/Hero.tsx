@@ -109,10 +109,18 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105 shadow-2xl hover:shadow-green-500/25 flex items-center">
+            <a
+              href="#linktree"
+              onClick={(e) => {
+                e.preventDefault();
+                window.location.hash = "linktree";
+                window.dispatchEvent(new HashChangeEvent("hashchange"));
+              }}
+              className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105 shadow-2xl hover:shadow-green-500/25 flex items-center"
+            >
               Launch Cube Pay
               <ArrowRight className="w-5 h-5 ml-2" />
-            </button>
+            </a>
             <button className="border border-white/20 hover:border-white/40 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 hover:bg-white/5 flex items-center">
               Connect Base App
             </button>
