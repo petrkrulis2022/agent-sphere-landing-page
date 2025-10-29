@@ -12,6 +12,7 @@ import SpatiaSection from "./components/sections/SpatiaSection";
 import PrivatePaymentsSection from "./components/sections/PrivatePaymentsSection";
 import SpatiaRegistrationSection from "./components/sections/SpatiaRegistrationSection";
 import CubePayLanding from "./components/CubePayLanding";
+import WelcomeModal from "./components/WelcomeModal";
 
 type Section =
   | "home"
@@ -28,6 +29,18 @@ type Section =
 
 function App() {
   const [currentSection, setCurrentSection] = useState<Section>("home");
+  const [showWelcomeModal, setShowWelcomeModal] = useState(false);
+
+  // Check if user has already voted
+  useEffect(() => {
+    const hasVoted = localStorage.getItem("spatia-user-vote");
+    if (!hasVoted) {
+      // Show modal after a short delay for better UX
+      setTimeout(() => {
+        setShowWelcomeModal(true);
+      }, 1000);
+    }
+  }, []);
 
   // Handle hash changes for navigation
   useEffect(() => {
@@ -92,6 +105,11 @@ function App() {
 
   return (
     <div className="min-h-screen bg-black">
+      {/* Welcome Modal */}
+      {showWelcomeModal && (
+        <WelcomeModal onClose={() => setShowWelcomeModal(false)} />
+      )}
+
       <Header
         currentSection={currentSection}
         onSectionChange={setCurrentSection}
