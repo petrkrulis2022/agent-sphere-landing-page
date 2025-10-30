@@ -198,7 +198,7 @@ const CubePayLanding = () => {
 
         {/* AgentSphere Button */}
         <a
-          href="http://localhost:5178/deploy"
+          href="http://localhost:5178"
           className="group relative overflow-hidden bg-gradient-to-br from-slate-700 to-slate-900 hover:from-slate-600 hover:to-slate-800 text-white rounded-2xl p-8 text-center transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-slate-500/50"
         >
           <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
