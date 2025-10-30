@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function SpatiaRegistrationSection() {
+export default function SpatialRegistrationSection() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -33,9 +33,9 @@ export default function SpatiaRegistrationSection() {
 
     try {
       // Create mailto link with form data
-      const subject = encodeURIComponent("Spatia Bank Registration");
+      const subject = encodeURIComponent("Spatial Bank Registration");
       const body = encodeURIComponent(`
-New Spatia Bank Registration:
+New Spatial Bank Registration:
 
 Name: ${formData.name}
 Email: ${formData.email}
@@ -46,7 +46,7 @@ IBAN: ${formData.iban}
 BIC: ${formData.bic}
 
 ---
-Submitted from Spatia Registration Form
+Submitted from Spatial Registration Form
       `);
 
       // Open email client
@@ -81,7 +81,7 @@ Submitted from Spatia Registration Form
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-            Join Spatia Bank
+            Join Spatial Bank
           </h1>
           <p className="text-xl text-gray-300">
             Your Gateway to Spatial Finance
@@ -281,7 +281,7 @@ Submitted from Spatia Registration Form
             }}
             className="inline-block text-blue-400 hover:text-blue-300 transition-colors"
           >
-            ← Back to Spatia
+            ← Back to Spatial
           </a>
         </div>
       </div>

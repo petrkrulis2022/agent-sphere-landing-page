@@ -29,18 +29,16 @@ type Section =
 
 function App() {
   const [currentSection, setCurrentSection] = useState<Section>("home");
-  const [showWelcomeModal, setShowWelcomeModal] = useState(false);
+  const [showWelcomeModal, setShowWelcomeModal] = useState(true);
 
-  // Check if user has already voted
-  useEffect(() => {
-    const hasVoted = localStorage.getItem("spatia-user-vote");
-    if (!hasVoted) {
-      // Show modal after a short delay for better UX
-      setTimeout(() => {
-        setShowWelcomeModal(true);
-      }, 1000);
-    }
-  }, []);
+  // Check if user has already voted (commented out for testing)
+  // useEffect(() => {
+  //   const hasVoted = localStorage.getItem("spatia-user-vote");
+  //   if (hasVoted) {
+  //     // If user already voted, don't show the modal
+  //     setShowWelcomeModal(false);
+  //   }
+  // }, []);
 
   // Handle hash changes for navigation
   useEffect(() => {

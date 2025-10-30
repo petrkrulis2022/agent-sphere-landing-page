@@ -51,7 +51,7 @@ const Navigation: React.FC<NavigationProps> = ({
       name: "Private Payments",
       href: "#private-payments",
     },
-    { id: "spatia" as Section, name: "Spatia Bank", href: "#spatia" },
+    { id: "spatia" as Section, name: "Spatial Bank", href: "#spatia" },
     { id: "contact" as Section, name: "Contact", href: "#contact" },
   ];
 

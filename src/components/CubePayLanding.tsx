@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Text } from "@react-three/drei";
 import * as THREE from "three";
@@ -16,7 +16,7 @@ const RotatingCube = () => {
   });
 
   const texts = [
-    "Enter Spatia",
+    "Enter Spatial",
     "AgentSphere",
     "AR Viewer",
     "Onboard To\nCrypto",
@@ -129,6 +129,20 @@ const RotatingCube = () => {
 };
 
 const CubePayLanding = () => {
+  const [showSpecial, setShowSpecial] = useState(false);
+
+  useEffect(() => {
+    // Flicker between "Spatial" and "Special" every 3 seconds for 500ms
+    const interval = setInterval(() => {
+      setShowSpecial(true);
+      setTimeout(() => {
+        setShowSpecial(false);
+      }, 500); // Show "Special" for 500ms
+    }, 3000); // Every 3 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-green-950 to-slate-950 flex flex-col items-center justify-center p-8">
       {/* 3D Cube Logo */}
@@ -146,17 +160,23 @@ const CubePayLanding = () => {
       </div>
 
       {/* CubePay Title */}
-      <h1 className="text-7xl font-bold mb-2 bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
-        Spatia
+      <h1
+        className={`text-7xl font-bold mb-2 transition-all duration-300 ${
+          showSpecial
+            ? "bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 bg-clip-text text-transparent italic -rotate-3 scale-110"
+            : "bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent"
+        }`}
+      >
+        {showSpecial ? "Special" : "Spatial"}
       </h1>
 
       <p className="text-2xl text-gray-300 mb-12 text-center max-w-2xl font-semibold">
-        Your Augmented Finance
+        Your Augmented FinApp
       </p>
 
       {/* Navigation Buttons */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-5xl">
-        {/* Enter Spatia Bank Button */}
+        {/* Enter Spatial Bank Button */}
         <a
           href="#register"
           onClick={(e) => {
@@ -169,7 +189,7 @@ const CubePayLanding = () => {
           <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
           <div className="relative z-10">
             <div className="text-4xl mb-3">�</div>
-            <h3 className="text-xl font-bold mb-2">Enter Spatia Bank</h3>
+            <h3 className="text-xl font-bold mb-2">Enter Spatial Bank</h3>
             <p className="text-sm text-blue-100">
               Your Spatial Financial Layer
             </p>

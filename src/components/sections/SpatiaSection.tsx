@@ -11,7 +11,7 @@ import {
   TrendingUp,
 } from "lucide-react";
 
-const SpatiaSection = () => {
+const SpatialSection = () => {
   return (
     <section className="min-h-screen bg-gradient-to-br from-black via-blue-950 to-black pt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -23,7 +23,7 @@ const SpatiaSection = () => {
           </div>
 
           <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent mb-6">
-            Spatia Bank
+            Spatial Bank
           </h1>
           <p className="text-2xl font-semibold text-gray-300 mb-8">
             Your AR Banking Experience
@@ -37,7 +37,7 @@ const SpatiaSection = () => {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105 shadow-2xl hover:shadow-blue-500/25 flex items-center">
-              Open Spatia Bank Account
+              Open Spatial Bank Account
               <ArrowRight className="w-5 h-5 ml-2" />
             </button>
             <button className="border border-white/20 hover:border-white/40 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 hover:bg-white/5">
@@ -155,7 +155,7 @@ const SpatiaSection = () => {
                 </h4>
                 <p className="text-gray-300">
                   Access virtual ATMs anywhere in the world through AR. Withdraw
-                  cash or crypto at any location with Spatia Bank presence.
+                  cash or crypto at any location with Spatial Bank presence.
                 </p>
               </div>
             </div>
@@ -199,7 +199,7 @@ const SpatiaSection = () => {
                   Virtual Branch Access
                 </h4>
                 <p className="text-gray-300">
-                  Visit Spatia Bank branches in AR from anywhere. Speak with AI
+                  Visit Spatial Bank branches in AR from anywhere. Speak with AI
                   advisors and access full banking services virtually.
                 </p>
               </div>
@@ -214,7 +214,7 @@ const SpatiaSection = () => {
               Banking Made Simple with AR
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Open your Spatia Bank account and start banking in augmented
+              Open your Spatial Bank account and start banking in augmented
               reality
             </p>
           </div>
@@ -225,10 +225,10 @@ const SpatiaSection = () => {
                 1
               </div>
               <h4 className="text-white font-semibold mb-2">
-                Download Spatia Bank
+                Download Spatial Bank
               </h4>
               <p className="text-gray-300 text-sm">
-                Get the Spatia Bank AR Banking app on your device
+                Get the Spatial Bank AR Banking app on your device
               </p>
             </div>
 
@@ -271,11 +271,11 @@ const SpatiaSection = () => {
               Ready for AR Banking?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join thousands already banking in augmented reality with Spatia
+              Join thousands already banking in augmented reality with Spatial
               Bank.
             </p>
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105 shadow-2xl hover:shadow-blue-500/25 flex items-center mx-auto">
-              Open Your Spatia Bank Account
+              Open Your Spatial Bank Account
               <ArrowRight className="w-5 h-5 ml-2" />
             </button>
           </div>
@@ -285,4 +285,4 @@ const SpatiaSection = () => {
   );
 };
 
-export default SpatiaSection;
+export default SpatialSection;

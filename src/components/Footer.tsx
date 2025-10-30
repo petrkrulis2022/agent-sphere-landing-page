@@ -65,7 +65,7 @@ const Footer = () => {
                   href="#spatia"
                   className="text-gray-400 hover:text-green-400 transition-colors text-sm"
                 >
-                  Spatia AR Bank
+                  Spatial AR Bank
                 </a>
               </li>
               <li>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   ArrowRight,
   Play,
@@ -11,6 +11,20 @@ import {
 import VideoPlayer from "./VideoPlayer";
 
 const Hero = () => {
+  const [showSpecial, setShowSpecial] = useState(false);
+
+  useEffect(() => {
+    // Flicker between "Spatial" and "Special" every 3 seconds for 500ms
+    const interval = setInterval(() => {
+      setShowSpecial(true);
+      setTimeout(() => {
+        setShowSpecial(false);
+      }, 500); // Show "Special" for 500ms
+    }, 3000); // Every 3 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
   // Home page video collection with uploaded videos
   const homeVideos = [
     {
@@ -57,10 +71,19 @@ const Hero = () => {
 
           {/* Main Headline */}
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            World's First
+            World's First{" "}
+            <span
+              className={`transition-all duration-300 ${
+                showSpecial
+                  ? "bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 bg-clip-text text-transparent italic"
+                  : "bg-gradient-to-r from-blue-400 via-green-400 to-cyan-400 bg-clip-text text-transparent"
+              }`}
+            >
+              {showSpecial ? "Special" : "Spatial"}
+            </span>
             <span className="bg-gradient-to-r from-blue-400 via-green-400 to-cyan-400 bg-clip-text text-transparent">
               {" "}
-              Spatial Payment Terminal
+              Payment Terminal
             </span>
           </h1>
 
@@ -68,7 +91,7 @@ const Hero = () => {
           <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
             Pay with crypto, fiat, or voice—all from one AR cube. No wallet
             switching. No complexity. Just rotate, select, and pay. Your ticket
-            to Spatia Bank.
+            to Spatial Bank.
           </p>
 
           {/* Key Features Grid */}
@@ -121,9 +144,6 @@ const Hero = () => {
               Launch Cube Pay
               <ArrowRight className="w-5 h-5 ml-2" />
             </a>
-            <button className="border border-white/20 hover:border-white/40 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 hover:bg-white/5 flex items-center">
-              Connect Base App
-            </button>
             <button className="border border-white/20 hover:border-white/40 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 hover:bg-white/5 flex items-center">
               <Play className="w-5 h-5 mr-2" />
               Watch Demo
