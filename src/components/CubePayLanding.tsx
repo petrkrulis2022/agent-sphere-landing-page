@@ -211,7 +211,7 @@ const CubePayLanding = () => {
 
         {/* AR Viewer Button */}
         <a
-          href="http://localhost:5173/"
+          href="http://localhost:5180/"
           className="group relative overflow-hidden bg-gradient-to-br from-green-700 to-green-900 hover:from-green-600 hover:to-green-800 text-white rounded-2xl p-8 text-center transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/50"
         >
           <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>

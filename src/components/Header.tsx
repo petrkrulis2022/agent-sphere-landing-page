@@ -12,6 +12,7 @@ type Section =
   | "spatia"
   | "private-payments"
   | "contact"
+  | "deck"
   | "linktree"
   | "register";
 

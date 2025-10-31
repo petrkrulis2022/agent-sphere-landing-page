@@ -10,6 +10,7 @@ type Section =
   | "spatia"
   | "private-payments"
   | "contact"
+  | "deck"
   | "linktree"
   | "register";
 
@@ -53,6 +54,7 @@ const Navigation: React.FC<NavigationProps> = ({
     },
     { id: "spatia" as Section, name: "Spatial Bank", href: "#spatia" },
     { id: "contact" as Section, name: "Contact", href: "#contact" },
+    { id: "deck" as Section, name: "Deck", href: "#deck" },
   ];
 
   const handleNavClick = (section: Section) => {

@@ -16,20 +16,40 @@ interface VideoPlayerProps {
     description: string;
   }>;
   className?: string;
+  autoPlay?: boolean;
 }
 
 const VideoPlayer: React.FC<VideoPlayerProps> = ({
   videos,
   className = "",
+  autoPlay = false,
 }) => {
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
+  const [shouldAutoPlay, setShouldAutoPlay] = useState(autoPlay);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const currentVideo = videos[currentVideoIndex];
+
+  // Auto-play effect when autoPlay prop is true or when moving to next video
+  useEffect(() => {
+    if (shouldAutoPlay && videoRef.current) {
+      const playPromise = videoRef.current.play();
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => {
+            setIsPlaying(true);
+          })
+          .catch((error) => {
+            console.log("Auto-play prevented:", error);
+            setIsPlaying(false);
+          });
+      }
+    }
+  }, [shouldAutoPlay, currentVideoIndex]);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -77,13 +97,19 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
   };
 
   const nextVideo = () => {
-    setCurrentVideoIndex((prev) => (prev + 1) % videos.length);
-    setIsPlaying(false);
+    if (currentVideoIndex < videos.length - 1) {
+      setCurrentVideoIndex((prev) => prev + 1);
+      setShouldAutoPlay(true); // Continue auto-playing
+    } else {
+      // Stop playing when reaching the last video
+      setIsPlaying(false);
+      setShouldAutoPlay(false);
+    }
   };
 
   const previousVideo = () => {
     setCurrentVideoIndex((prev) => (prev - 1 + videos.length) % videos.length);
-    setIsPlaying(false);
+    setShouldAutoPlay(false);
   };
 
   const formatTime = (time: number) => {

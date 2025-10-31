@@ -1,16 +1,26 @@
+import { useEffect, useState } from "react";
 import VideoPlayer from "../VideoPlayer";
 
 const WatchDemoSection = () => {
+  const [autoPlay, setAutoPlay] = useState(false);
+
+  useEffect(() => {
+    // Check if we just navigated here (e.g., from the deck)
+    // Set autoPlay to true briefly when the section loads
+    const timer = setTimeout(() => {
+      setAutoPlay(true);
+      // Reset after a short delay to prevent auto-play on subsequent visits
+      setTimeout(() => setAutoPlay(false), 1000);
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   const videos = [
     {
       src: "/videos/cubepay/AR_Ticket_Confirmation_and_Payment.mp4",
       title: "AR Ticket Payment",
       description: "Buy tickets with instant AR confirmation",
-    },
-    {
-      src: "/videos/cubepay/Hotel_Payment_and_Booking_Confirmation_Video (1).mp4",
-      title: "Hotel Booking & Payment",
-      description: "Complete hotel bookings with secure payments",
     },
     {
       src: "/videos/cubepay/AR_QR_Payment_Video_Storyboard.mp4",
@@ -27,10 +37,28 @@ const WatchDemoSection = () => {
       title: "Restaurant Payment",
       description: "Dining payment confirmation in AR",
     },
+    // Videos from Onboard Crypto section
     {
-      src: "/videos/cubepay/restaurant-payment.mp4",
-      title: "Restaurant Demo",
-      description: "Real-world restaurant payment flow",
+      src: "/videos/cubepay/Crypto_On_Off_Ramp_Video_Generation.mp4",
+      title: "Crypto On/Off Ramp",
+      description: "Seamlessly convert between crypto and fiat with ease",
+    },
+    {
+      src: "/videos/cubepay/AR_Bus_Agent_Video_Generation.mp4",
+      title: "AR Agent Assistance",
+      description: "AI agents guide you through your crypto journey",
+    },
+    // Video 2 from Why Cube Pay section
+    {
+      src: "/videos/cubepay/Virtual_Card_Contactless_Payment_Video.mp4",
+      title: "Virtual Card Payments",
+      description: "Contactless virtual card payment experience",
+    },
+    // Videos 1 and 2 from Private Payments section
+    {
+      src: "/videos/cubepay/E_shop_Payment_with_Virtual_Card.mp4",
+      title: "E-shop Virtual Card Payment",
+      description: "Shop online securely with virtual cards",
     },
   ];
 
@@ -51,7 +79,11 @@ const WatchDemoSection = () => {
 
         {/* Video Demonstrations */}
         <div className="mb-20">
-          <VideoPlayer videos={videos} className="max-w-6xl mx-auto" />
+          <VideoPlayer
+            videos={videos}
+            className="max-w-6xl mx-auto"
+            autoPlay={autoPlay}
+          />
         </div>
       </div>
     </section>

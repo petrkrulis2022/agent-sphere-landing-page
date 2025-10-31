@@ -11,6 +11,7 @@ import CubePaySection from "./components/sections/CubePaySection";
 import SpatiaSection from "./components/sections/SpatiaSection";
 import PrivatePaymentsSection from "./components/sections/PrivatePaymentsSection";
 import SpatiaRegistrationSection from "./components/sections/SpatiaRegistrationSection";
+import DeckSection from "./components/sections/DeckSection";
 import CubePayLanding from "./components/CubePayLanding";
 import WelcomeModal from "./components/WelcomeModal";
 
@@ -24,6 +25,7 @@ type Section =
   | "spatia"
   | "private-payments"
   | "contact"
+  | "deck"
   | "linktree"
   | "register";
 
@@ -56,6 +58,7 @@ function App() {
           "spatia",
           "private-payments",
           "contact",
+          "deck",
           "linktree",
           "register",
         ].includes(hash)
@@ -92,6 +95,8 @@ function App() {
         return <PrivatePaymentsSection />;
       case "contact":
         return <Contact />;
+      case "deck":
+        return <DeckSection />;
       case "linktree":
         return <CubePayLanding />;
       case "register":
@@ -105,7 +110,14 @@ function App() {
     <div className="min-h-screen bg-black">
       {/* Welcome Modal */}
       {showWelcomeModal && (
-        <WelcomeModal onClose={() => setShowWelcomeModal(false)} />
+        <WelcomeModal
+          onClose={() => {
+            setShowWelcomeModal(false);
+            // Navigate to Deck section after closing modal
+            setCurrentSection("deck");
+            window.location.hash = "#deck";
+          }}
+        />
       )}
 
       <Header
